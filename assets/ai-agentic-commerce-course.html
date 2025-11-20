@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Commerce Course for Senior Product Managers</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --accent: #22c55e;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --border: #1f2937;
+      --highlight: #a855f7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: radial-gradient(circle at 20% 20%, rgba(34,197,94,0.15), transparent 35%),
+                  radial-gradient(circle at 80% 0%, rgba(168,85,247,0.12), transparent 45%),
+                  linear-gradient(135deg, #0b1222, #0f172a 40%, #0b1222);
+      padding: 64px 24px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "Agentic";
+      position: absolute;
+      right: -40px;
+      bottom: -30px;
+      font-size: 120px;
+      font-weight: 800;
+      color: rgba(226,232,240,0.03);
+      transform: rotate(-10deg);
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      margin: 32px 0 12px;
+      font-size: 24px;
+    }
+
+    h3 { margin: 20px 0 8px; }
+
+    p { color: var(--muted); }
+
+    .pill {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      background: rgba(34,197,94,0.1);
+      color: #bbf7d0;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px 64px; }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .two-col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 50px rgba(0,0,0,0.25);
+    }
+
+    .panel h3 { color: #e5e7eb; }
+
+    ul { padding-left: 18px; color: var(--muted); }
+    li { margin-bottom: 6px; }
+
+    .timeline {
+      border-left: 2px solid var(--border);
+      padding-left: 16px;
+    }
+
+    .timeline .wave {
+      position: relative;
+      margin-bottom: 16px;
+      padding-left: 8px;
+    }
+
+    .timeline .wave::before {
+      content: "";
+      position: absolute;
+      left: -23px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--highlight));
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.15);
+    }
+
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .badge {
+      background: rgba(148,163,184,0.14);
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+      padding: 6px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+    }
+
+    .table-like {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(34,197,94,0.05), rgba(168,85,247,0.05));
+    }
+
+    .table-like > div { padding: 14px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); }
+    .table-like > div:last-child { border-right: none; }
+
+    .highlight-card {
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+      margin: 10px 0;
+    }
+
+    .callout {
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.3);
+      padding: 14px;
+      border-radius: 12px;
+    }
+
+    .small { font-size: 14px; }
+
+    a { color: #93c5fd; }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      header { padding: 52px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="pill">Senior PM Playbook · AI Commerce</div>
+    <h1>From Generative Assistants to Agentic Checkout</h1>
+    <p style="max-width:720px;margin:12px auto 0;">A fast, evidence-backed course for senior Product Managers on how AI is reshaping retail: the five waves of AI, how shopping behaviors are shifting, and how to make products and operations legible to autonomous agents.</p>
+  </header>
+
+  <main class="container">
+    <section class="grid two-col">
+      <div class="panel">
+        <h3>Course Outcomes</h3>
+        <ul>
+          <li>Explain the five waves of AI in commerce and what “agentic checkout” changes for funnels and attribution.</li>
+          <li>Translate changing shopper behaviors into product requirements (universal cart, policy-aware bundles, review synthesis).</li>
+          <li>Redesign merchant JTBD toward Assistant/Agent Optimization (AIO), agent-ready data, and ACP/Instant Checkout.</li>
+          <li>Build a 12‑month roadmap with experiments, data standards, and risk controls.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Audience & Format</h3>
+        <ul>
+          <li><strong>Audience:</strong> Senior PMs/Heads of Product in ecommerce, marketplaces, and retail platforms.</li>
+          <li><strong>Format:</strong> 5 modules, each with briefs, decision frameworks, and PM action checklists.</li>
+          <li><strong>Sources:</strong> Amazon Rufus, Google Shopping (Gemini + Shopping Graph), Instacart, Klarna, Walmart Sparky, OpenAI Instant Checkout/ACP.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Module 1 · The Five Waves of AI in Ecommerce & Retail</h2>
+      <div class="panel timeline">
+        <div class="wave">
+          <h3>Wave 1 — Rules & heuristics (≈1999–2012)</h3>
+          <p>Faceted search, basic collaborative filtering, coupon engines, and retargeting. Human rules drove “If user saw X, show Y.”</p>
+        </div>
+        <div class="wave">
+          <h3>Wave 2 — Predictive ML at scale (≈2012–2022)</h3>
+          <p>Deep-learning rankers for search/recs, dynamic pricing, demand forecasting, visual search, fulfillment optimization. Large catalogs + clickstream signals improved personalization and logistics.</p>
+        </div>
+        <div class="wave">
+          <h3>Wave 3 — GenAI overlays (2023–2024)</h3>
+          <p>LLM layers on catalogs: conversational discovery, AI review highlights, product copy generation, concierge-style support. Examples: Amazon Rufus, Google Shopping AI briefs, Instacart “Ask Instacart,” Klarna’s assistant handling ~700 agents worth of work.</p>
+        </div>
+        <div class="wave">
+          <h3>Wave 4 — Agentic, multi-merchant checkout (2025→)</h3>
+          <p>Assistants transact in-line. OpenAI’s Instant Checkout via ACP (Etsy live, Shopify coming) and Walmart’s Sparky signal a shift from search to plan/compare/buy inside chat.</p>
+        </div>
+        <div class="wave">
+          <h3>Wave 5 — Ambient, autonomous commerce (2026–2030)</h3>
+          <p>Multimodal agents plan, negotiate, check inventory/CO₂/ETA, orchestrate baskets across retailers under user policies. Standards like ACP + GS1 Digital Link + schema.org Product make product data trustworthy for agents.</p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:14px;">
+        <strong>Positioning statement:</strong> We are living the GenAI overlay (Wave 3) while building for agentic checkout (Wave 4) and ambient autonomy (Wave 5).
+      </div>
+    </section>
+
+    <section>
+      <h2>Module 2 · How Shopping Behaviors Are Changing</h2>
+      <div class="grid two-col">
+        <div class="panel">
+          <h3>From click-and-compare → describe-and-delegate</h3>
+          <p>Shoppers now specify goals (budget, dietary constraints, delivery window) and expect a shoppable plan with one-flow checkout—often across merchants—without leaving the assistant.</p>
+          <ul>
+            <li>Goal shopping: “Furnish a studio for &lt;$900; stage deliveries.”</li>
+            <li>Occasion planning: “Backyard dinner for 8, gluten-free, &lt;$120” with recipe + tool bundles.</li>
+            <li>Show-to-shop: Snap/paste for look-alikes, compatibility, and availability (Gemini + Lens; Walmart multimodal plans).</li>
+            <li>Policy-driven value: Standing rules (brand, eco, delivery, returns) enforced by agents.</li>
+            <li>Post-purchase autopilot: Returns, warranty, and reorder cadence in chat (Klarna’s 11→2 minute resolutions).</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>The Universal Cart & “Chatbot Aggregators”</h3>
+          <p>Assistants become channels with in-chat checkout (ACP/Instant Checkout). Ranking shifts from “blue links” to “best answer,” forcing merchants to expose structured, provable reasons-to-buy.</p>
+          <ul>
+            <li>Single conversation spans discovery → comparison → payment.</li>
+            <li>Multi-item and multi-merchant carts emerging; assume agent-curated bundles.</li>
+            <li>Attribution evolves: assistant-referred revenue and selection share matter more than pageviews.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Module 3 · JTBD Shift for Consumers & Merchants</h2>
+      <div class="panel">
+        <h3>Consumer JTBD (from → to)</h3>
+        <div class="table-like">
+          <div><strong>Find options</strong><br><span class="muted">Type keywords, filter manually.</span></div>
+          <div><strong>State outcomes</strong><br>Agent curates with trade-offs and rationales.</div>
+          <div><strong>Compare tabs/reviews</strong><br>Synthesize reviews/specs for your context.</div>
+          <div><strong>Hunt deals/coupons</strong><br>Set price/brand/delivery policies; agent enforces.</div>
+          <div><strong>Manage multiple carts</strong><br>One universal conversation/cart across merchants.</div>
+          <div><strong>Track orders/support</strong><br>Conversational aftercare with fast resolution.</div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:14px;">
+        <h3>Merchant JTBD (from → to)</h3>
+        <div class="table-like">
+          <div><strong>Drive traffic to site</strong><br>SEO/SEM playbooks.</div>
+          <div><strong>Be legible to assistants</strong><br>High-fidelity product feeds, availability, trust signals (schema.org + GS1 Digital Link).</div>
+          <div><strong>Optimize PDP copy</strong><br>Generate & govern synthetic variants; expose reasons-to-buy for LLMs.</div>
+          <div><strong>Optimize for SEO</strong><br>Optimize for AIO—be the selected answer inside AI briefs.</div>
+          <div><strong>Checkout on owned site</strong><br>Offer agent-native checkout (ACP / Instant Checkout) as a high-intent channel.</div>
+          <div><strong>Customer service queues</strong><br>AI-first service with autonomous resolution and guardrails.</div>
+          <div><strong>Promos to people</strong><br>APIs for agents: price/availability webhooks, bundles, returns, CO₂/ETA signals.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Module 4 · Maturity Model & 12-Month Build Plan</h2>
+      <div class="grid two-col">
+        <div class="panel">
+          <h3>Retail AI Maturity (L1→L5)</h3>
+          <ul>
+            <li><strong>L1 Content:</strong> AI-assisted PDP copy, images, translations (with guardrails).</li>
+            <li><strong>L2 Service:</strong> AI support copilot + returns automation; track AHT/CSAT/containment.</li>
+            <li><strong>L3 Conversational discovery:</strong> Embedded assistants (Rufus/Sparky-like), review synthesis, occasion shopping.</li>
+            <li><strong>L4 Agent-ready data & APIs:</strong> Schema.org/GS1, real-time availability/pricing, explicit reasons-to-buy, post-purchase hooks.</li>
+            <li><strong>L5 Agentic commerce:</strong> ACP participation, Instant Checkout, assistant channels treated like marketplaces with attribution & margin controls.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>12-Month Plan (merchant)</h3>
+          <div class="highlight-card"><strong>0–90 days:</strong> Fill attribute gaps; add schema.org/Product; map SKUs to GS1 Digital Link; explain “why this pick”; launch service copilot for returns/status/refunds.</div>
+          <div class="highlight-card"><strong>3–6 months:</strong> Apply for ChatGPT merchant onboarding; test Instant Checkout (single-item flows); build order/returns webhooks; publish spec sheets and comparison pages; track assistant selection/citation rate.</div>
+          <div class="highlight-card"><strong>6–12 months:</strong> Expose occasion/bundle APIs; add policy endpoints (delivery windows, CO₂, price-match, return friction); build negotiation/risk checks with confirmation steps.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Module 5 · What to Prototype This Quarter</h2>
+      <div class="grid two-col">
+        <div class="panel">
+          <h3>Experiments</h3>
+          <ul>
+            <li><strong>“Describe & buy” concierge:</strong> Accept free-form goals; return shoppable bundles with swap/alternatives; test conversion vs. search-led flows.</li>
+            <li><strong>Agent channel pilot:</strong> Wire a limited catalog to ACP/Instant Checkout; enforce strict price/stock guardrails; measure selection rate, margin, and drop-off.</li>
+            <li><strong>Review synthesis with provenance:</strong> Surface why the model recommends items; cite review clusters/specs like Google/Amazon.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Risks & Mitigations</h3>
+          <ul>
+            <li><strong>Disintermediation:</strong> Invest in distinctive reasons-to-buy, fast SLAs, identity standards so agents prefer you.</li>
+            <li><strong>Data quality drift:</strong> Create attribute completeness KPIs; auto-validate feeds (price/stock/returns freshness).</li>
+            <li><strong>Compliance & trust:</strong> Human-in-loop for high-risk categories; log agent decisions; expose recency and sources.</li>
+            <li><strong>Voice/agent reversals:</strong> Instrument experiments; be ready to pivot (e.g., paused voice ordering pilots).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Bonus · Reverse Shopping & Negotiator Scenario</h2>
+      <div class="panel">
+        <p><strong>Reverse shopping:</strong> Users broadcast intent; merchant agents listen and bid with time-bound offers. User’s AI curates top options, shifting competition to “become the selected answer.”</p>
+        <p><strong>Negotiator flow:</strong> AI assembles a multi-item basket, negotiates with merchant agents on price, and checks out once within budget—requiring dynamic, agent-accessible pricing rules and clear negotiation limits.</p>
+        <div class="badge-row">
+          <span class="badge">Agent wallets & permissions</span>
+          <span class="badge">Multi-merchant orchestration</span>
+          <span class="badge">Dynamic pricing/offer APIs</span>
+          <span class="badge">Biometric approvals</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Glossary & Standards</h2>
+      <div class="grid two-col">
+        <div class="panel">
+          <ul>
+            <li><strong>ACP (Agentic Commerce Protocol):</strong> OpenAI/Stripe standard for agent ↔ merchant checkout flows.</li>
+            <li><strong>Instant Checkout:</strong> In-chat purchase flow inside ChatGPT using ACP.</li>
+            <li><strong>GS1 Digital Link:</strong> Canonical product identity URL tying GTIN/serials to trusted product data.</li>
+            <li><strong>AIO (Assistant/Agent Optimization):</strong> Making your catalog selectable by assistants (structured data, provenance, reasons-to-buy).</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>TL;DR (strategy in one line)</h3>
+          <p style="font-size:18px;">Make your products legible to AI, make your operations callable by AI, and meet customers where their assistant lives.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ready-to-Use Checklists</h2>
+      <div class="grid two-col">
+        <div class="panel">
+          <h3>Product/Data Readiness</h3>
+          <ul>
+            <li>Complete schema.org/Product for top SKUs; validate in Search Console.</li>
+            <li>Publish GS1 Digital Link URLs; ensure SKU ↔ GTIN mapping.</li>
+            <li>Capture reasons-to-buy, pros/cons, and context tags (fit, climate, compatibility).</li>
+            <li>Expose availability, price, CO₂/ETA, and returns as APIs/webhooks for agents.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Experience & Ops</h3>
+          <ul>
+            <li>Design describe-and-delegate UX with swap/constraints support.</li>
+            <li>Instrument assistant-referred revenue, selection share, and citation rate.</li>
+            <li>Implement confirmation/negotiation guardrails and human-in-loop paths.</li>
+            <li>Track AHT/CSAT/containment for AI-first service; iterate policies.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
